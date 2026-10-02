@@ -1,0 +1,3130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Noris.exe ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#090914;
+    color:white;
+    overflow-x:hidden;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+    radial-gradient(circle at 20% 20%,#ff2d7530,transparent 30%),
+    radial-gradient(circle at 80% 70%,#7c3cff30,transparent 30%),
+    #090914;
+}
+
+.blob{
+    position:fixed;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.35;
+    z-index:-1;
+}
+
+.blob.one{
+    background:#ff2675;
+    top:10%;
+    left:-100px;
+}
+
+.blob.two{
+    background:#7c3cff;
+    bottom:5%;
+    right:-100px;
+}
+
+section{
+    min-height:100vh;
+    padding:90px 8%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.hero{
+    text-align:center;
+}
+
+.small{
+    color:#ff78a8;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(55px,12vw,130px);
+    line-height:.9;
+    background:linear-gradient(
+        90deg,
+        #ff4f91,
+        #ffb0ca,
+        #a87cff
+    );
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        filter:drop-shadow(0 0 5px #ff3677);
+    }
+    to{
+        filter:drop-shadow(0 0 25px #ff3677);
+    }
+}
+
+.subtitle{
+    margin:30px auto;
+    max-width:700px;
+    color:#c9c9d8;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.btn{
+    border:none;
+    background:linear-gradient(
+        135deg,
+        #ff347d,
+        #8c4cff
+    );
+    color:white;
+    padding:15px 28px;
+    border-radius:40px;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 10px 30px #ff347d40;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 15px 40px #ff347d70;
+}
+
+.section-title{
+    font-size:42px;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.section-subtitle{
+    color:#aaaabc;
+    margin-bottom:50px;
+    text-align:center;
+    max-width:700px;
+    line-height:1.7;
+}
+
+/* CARDS */
+
+.cards{
+    width:100%;
+    max-width:1100px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#ffffff08;
+    border:1px solid #ffffff12;
+    backdrop-filter:blur(15px);
+    padding:30px;
+    border-radius:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#ff4c8b80;
+    background:#ffffff0d;
+}
+
+.emoji{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#ff82aa;
+}
+
+.card p{
+    color:#bdbdca;
+    line-height:1.7;
+}
+
+/* FRIENDSHIP TIMELINE */
+
+.timeline{
+    width:100%;
+    max-width:800px;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:linear-gradient(
+        #ff4385,
+        #8c4cff
+    );
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:35px;
+    padding-left:60px;
+}
+
+.timeline-dot{
+    position:absolute;
+    left:8px;
+    top:5px;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:#ff4d8b;
+    box-shadow:0 0 20px #ff4d8b;
+}
+
+.timeline-content{
+    background:#ffffff08;
+    border:1px solid #ffffff12;
+    border-radius:20px;
+    padding:25px;
+}
+
+.timeline-content h3{
+    color:#ff82aa;
+    margin-bottom:8px;
+}
+
+.timeline-content p{
+    color:#bbbcca;
+    line-height:1.7;
+}
+
+/* STATS */
+
+.stats{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.stat{
+    width:190px;
+    padding:28px 15px;
+    background:#ffffff08;
+    border-radius:20px;
+    border:1px solid #ffffff12;
+    text-align:center;
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:scale(1.05);
+}
+
+.stat span{
+    display:block;
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.stat p{
+    color:#aaaabc;
+}
+
+/* AWARDS */
+
+.awards{
+    width:100%;
+    max-width:1000px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.award{
+    background:linear-gradient(
+        135deg,
+        #ffffff08,
+        #ff367708
+    );
+    border:1px solid #ffffff12;
+    padding:30px;
+    border-radius:25px;
+    transition:.3s;
+}
+
+.award:hover{
+    transform:translateY(-7px);
+}
+
+.award-icon{
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.award h3{
+    color:#ff86ad;
+    margin-bottom:8px;
+}
+
+.award p{
+    color:#bdbdca;
+    line-height:1.7;
+}
+
+/* LETTER */
+
+.letter{
+    max-width:800px;
+    background:#ffffff08;
+    border:1px solid #ffffff15;
+    border-radius:30px;
+    padding:45px;
+    line-height:2;
+    color:#d5d5df;
+    font-size:17px;
+    box-shadow:0 20px 70px #00000040;
+}
+
+.letter strong{
+    color:#ff79a8;
+}
+
+/* RULES */
+
+.rules{
+    max-width:800px;
+    width:100%;
+}
+
+.rule{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#ffffff08;
+    border:1px solid #ffffff12;
+    padding:20px;
+    border-radius:18px;
+    margin-bottom:15px;
+}
+
+.rule-number{
+    min-width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+        135deg,
+        #ff397e,
+        #854dff
+    );
+    border-radius:50%;
+    font-weight:bold;
+}
+
+.rule p{
+    color:#c3c3d0;
+    line-height:1.6;
+}
+
+/* QUIZ */
+
+.quiz-box{
+    max-width:700px;
+    width:100%;
+    text-align:center;
+    background:#ffffff08;
+    border:1px solid #ffffff15;
+    border-radius:30px;
+    padding:40px;
+}
+
+#question{
+    font-size:24px;
+    line-height:1.5;
+    margin-bottom:30px;
+}
+
+.options{
+    display:grid;
+    gap:12px;
+}
+
+.option{
+    padding:15px;
+    border-radius:15px;
+    border:1px solid #ffffff15;
+    background:#ffffff08;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.option:hover{
+    background:#ff397e22;
+    border-color:#ff397e70;
+}
+
+/* MEMORY */
+
+.memory-grid{
+    width:100%;
+    max-width:1000px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.memory{
+    min-height:190px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+    border-radius:25px;
+    background:linear-gradient(
+        145deg,
+        #ffffff0b,
+        #ff3b7810
+    );
+    border:1px solid #ffffff12;
+    transition:.3s;
+}
+
+.memory:hover{
+    transform:rotate(-2deg) scale(1.03);
+}
+
+.memory p{
+    color:#c6c6d2;
+    line-height:1.7;
+}
+
+/* SECRET */
+
+.secret{
+    text-align:center;
+}
+
+#secretMessage{
+    display:none;
+    margin-top:25px;
+    padding:30px;
+    max-width:650px;
+    color:#ffc1d7;
+    background:#ff3d7d12;
+    border:1px solid #ff3d7d30;
+    border-radius:20px;
+    line-height:1.8;
+}
+
+/* FINAL */
+
+.final-message{
+    text-align:center;
+    max-width:750px;
+}
+
+.final-message h2{
+    font-size:55px;
+    margin-bottom:25px;
+    background:linear-gradient(
+        90deg,
+        #ff4f91,
+        #a87cff
+    );
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.final-message p{
+    color:#c3c3d0;
+    font-size:18px;
+    line-height:1.9;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:50px 20px 70px;
+    color:#77778b;
+}
+
+footer span{
+    color:#ff5b91;
+}
+
+/* HEARTS */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:20px;
+    pointer-events:none;
+    animation:floatUp 5s linear forwards;
+    z-index:20;
+}
+
+@keyframes floatUp{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+    .cards,
+    .awards,
+    .memory-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .letter{
+        padding:28px;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+    .final-message h2{
+        font-size:40px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+<div class="blob one"></div>
+<div class="blob two"></div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="small">
+        ⚠️ Important Friendship Announcement
+    </div>
+
+    <h1>NORIS</h1>
+
+    <p class="subtitle">
+
+        Congratulations Yash aka Noris 😭<br>
+
+        You have officially survived another year
+        as my <b>boy best friend.</b> 🫡❤️
+
+        <br><br>
+
+        No boyfriend.
+        No girlfriend.
+        Just two idiots being best friends. 🤝
+
+    </p>
+
+    <button class="btn" onclick="scrollToSection()">
+        Enter Noris Universe 🚀
+    </button>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section id="main">
+
+    <h2 class="section-title">
+        So... Why Is Noris Special? 🤨
+    </h2>
+
+    <p class="section-subtitle">
+        Honestly, even I don't know.
+        But after extensive research,
+        here's the evidence.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="emoji">😂</div>
+
+            <h3>Professional Idiot</h3>
+
+            <p>
+                Somehow you manage to make even the most
+                normal conversation completely stupid.
+                And somehow... I still laugh.
+                Unfortunately.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="emoji">🫂</div>
+
+            <h3>Always There</h3>
+
+            <p>
+                Jokes apart, you're one of those people
+                I know I can talk to without having to
+                explain every single thing.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="emoji">🤡</div>
+
+            <h3>Certified Nonsense</h3>
+
+            <p>
+                Your talent for saying the most random
+                thing at the most random moment
+                genuinely deserves an award.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="emoji">🧠</div>
+
+            <h3>Unexpected Therapist</h3>
+
+            <p>
+                Sometimes you give surprisingly good
+                advice. Which is honestly concerning
+                because I didn't expect that from you.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="emoji">📱</div>
+
+            <h3>Random Text Machine</h3>
+
+            <p>
+                One minute we're talking normally.
+                The next minute we're discussing
+                something that makes absolutely no sense.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="emoji">❤️</div>
+
+            <h3>Actually Special</h3>
+
+            <p>
+                Under all the nonsense,
+                you're genuinely someone I value
+                and I'm really glad you're my bestie.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FRIENDSHIP TIMELINE -->
+
+<section>
+
+    <h2 class="section-title">
+        The Noris Lore 📖
+    </h2>
+
+    <p class="section-subtitle">
+        A completely unofficial history of our friendship.
+    </p>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>Chapter 01 — Somehow We Became Friends</h3>
+
+                <p>
+                    There was probably a normal beginning...
+                    but honestly, our friendship became
+                    chaotic way too quickly. 😭
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>Chapter 02 — The Bakchodi Era</h3>
+
+                <p>
+                    Random conversations,
+                    stupid jokes,
+                    unnecessary arguments
+                    and somehow endless things to talk about.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>Chapter 03 — Bestie Status Unlocked 🔓</h3>
+
+                <p>
+                    Somewhere along the way,
+                    you stopped being just a friend
+                    and became one of my people.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>Chapter 04 — Currently Loading...</h3>
+
+                <p>
+                    More memories,
+                    more nonsense,
+                    more arguments,
+                    more laughter
+                    and hopefully many more years of friendship. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section>
+
+    <h2 class="section-title">
+        Noris Friendship Statistics 📊
+    </h2>
+
+    <p class="section-subtitle">
+        Completely scientific.
+        Definitely not made up.
+    </p>
+
+    <div class="stats">
+
+        <div class="stat">
+            <span>∞</span>
+            <p>Random Conversations</p>
+        </div>
+
+        <div class="stat">
+            <span>99%</span>
+            <p>Bakchodi Level</p>
+        </div>
+
+        <div class="stat">
+            <span>100%</span>
+            <p>Trust</p>
+        </div>
+
+        <div class="stat">
+            <span>0%</span>
+            <p>Normal Behaviour</p>
+        </div>
+
+        <div class="stat">
+            <span>24/7</span>
+            <p>Bestie Energy</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AWARDS -->
+
+<section>
+
+    <h2 class="section-title">
+        The Official Noris Awards 🏆
+    </h2>
+
+    <p class="section-subtitle">
+        After absolutely no judging process whatsoever...
+    </p>
+
+    <div class="awards">
+
+        <div class="award">
+
+            <div class="award-icon">🏆</div>
+
+            <h3>Best Boy Bestie Award</h3>
+
+            <p>
+                Awarded for being annoying,
+                supportive, funny and somehow
+                still tolerable.
+            </p>
+
+        </div>
+
+
+        <div class="award">
+
+            <div class="award-icon">🥇</div>
+
+            <h3>Most Random Person Award</h3>
+
+            <p>
+                For saying things nobody asked for
+                at moments nobody expected.
+            </p>
+
+        </div>
+
+
+        <div class="award">
+
+            <div class="award-icon">🫡</div>
+
+            <h3>Certified Homie Award</h3>
+
+            <p>
+                For surviving countless conversations
+                and still coming back for more.
+            </p>
+
+        </div>
+
+
+        <div class="award">
+
+            <div class="award-icon">💖</div>
+
+            <h3>Actually Important Award</h3>
+
+            <p>
+                For being someone whose presence
+                genuinely matters, even when
+                neither of us says it.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MEMORIES -->
+
+<section>
+
+    <h2 class="section-title">
+        Things That Make This Friendship Us 🫶
+    </h2>
+
+    <p class="section-subtitle">
+        Some friendships are made from big moments.
+        Ours is made from tiny stupid ones.
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory">
+            <p>
+                😂 Random conversations that somehow
+                become hours long.
+            </p>
+        </div>
+
+        <div class="memory">
+            <p>
+                🤡 Making fun of each other for
+                absolutely no reason.
+            </p>
+        </div>
+
+        <div class="memory">
+            <p>
+                📱 Sending random messages just because
+                something reminded us of the other.
+            </p>
+        </div>
+
+        <div class="memory">
+            <p>
+                🫂 Being able to talk about serious
+                things without making it awkward.
+            </p>
+        </div>
+
+        <div class="memory">
+            <p>
+                😭 Saying "okay bye" and then continuing
+                the conversation for another 40 minutes.
+            </p>
+        </div>
+
+        <div class="memory">
+            <p>
+                ❤️ Knowing that behind all the jokes,
+                there's genuine care.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FRIENDSHIP RULES -->
+
+<section>
+
+    <h2 class="section-title">
+        Official Bestie Rules 📜
+    </h2>
+
+    <p class="section-subtitle">
+        Read carefully. There will be no appeals.
+    </p>
+
+    <div class="rules">
+
+        <div class="rule">
+
+            <div class="rule-number">01</div>
+
+            <p>
+                Besties are legally required to
+                annoy each other at least once a day.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">02</div>
+
+            <p>
+                If one person says "I have something
+                to tell you", the other person MUST listen.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">03</div>
+
+            <p>
+                Embarrassing moments shall never be forgotten.
+                They shall be saved for future blackmail.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">04</div>
+
+            <p>
+                Serious problems require serious support.
+                Stupid problems require even more support.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">05</div>
+
+            <p>
+                No matter how busy life gets,
+                the friendship stays.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section>
+
+    <h2 class="section-title">
+        How Well Do You Know Your Girl Bestie? 👀
+    </h2>
+
+    <p class="section-subtitle">
+        Noris, this one is for you.
+        Let's see if you've been paying attention.
+    </p>
+
+    <div class="quiz-box">
+
+        <div id="question">
+            Loading question...
+        </div>
+
+        <div class="options" id="options"></div>
+
+        <br>
+
+        <p id="quizResult"></p>
+
+    </div>
+
+</section>
+
+
+<!-- EMOTIONAL -->
+
+<section>
+
+    <h2 class="section-title">
+        Okay... Jokes Aside 🫶
+    </h2>
+
+    <p class="section-subtitle">
+        Thoda emotional hone ka time hai.
+    </p>
+
+    <div class="letter">
+
+        Yash,
+
+        <br><br>
+
+        I know hum dono ka relationship mostly
+        <strong>bakchodi, roasting aur random conversations</strong>
+        se bhara hua hai.
+
+        <br><br>
+
+        But honestly, I'm really glad that you're my
+        <strong>boy best friend.</strong>
+
+        <br><br>
+
+        Har friendship perfect nahi hoti.
+        Kabhi hum irritate hote hain,
+        kabhi ladte hain,
+        kabhi ek dusre ko unnecessarily
+        pareshan karte hain...
+
+        <br><br>
+
+        But at the end of the day,
+        you're still one of those people
+        whose presence genuinely matters to me.
+
+        <br><br>
+
+        And maybe I don't say it enough,
+        but I really appreciate the fact
+        that I can be completely myself around you.
+
+        <br><br>
+
+        I hope life mein chahe kitne bhi naye log aaye,
+        kitni bhi cheezein change ho,
+        humari friendship ka ye stupid sa bond
+        kahin nahi jaaye.
+
+        <br><br>
+
+        And no, this is NOT me becoming emotional.
+        Screenshot mat lena. 😭
+
+        <br><br>
+
+        Bas itna yaad rakhna...
+
+        <br><br>
+
+        <strong>
+            Boyfriend nahi ho,
+            boyfriend banne ki zarurat bhi nahi.
+
+            You're my best friend,
+            and honestly,
+            that's pretty damn special. ❤️
+        </strong>
+
+        <br><br>
+
+        Stay stupid.
+        Stay annoying.
+        And please don't become normal.
+
+        <br><br>
+
+        — Your Girl Bestie 🫶
+
+    </div>
+
+</section>
+
+
+<!-- SECRET -->
+
+<section class="secret">
+
+    <h2 class="section-title">
+        🔐 Classified Section
+    </h2>
+
+    <p class="section-subtitle">
+        Noris ke liye ek secret message...
+    </p>
+
+    <button class="btn" onclick="secretMessage()">
+        DO NOT CLICK 👀
+    </button>
+
+    <div id="secretMessage">
+
+        If you're reading this...
+
+        <br><br>
+
+        congratulations, idiot. 😂
+
+        <br><br>
+
+        You officially have a girl bestie
+        who spent her time making an entire website
+        just to remind you that you're important.
+
+        <br><br>
+
+        So yes...
+
+        <strong>
+            you're stuck with me.
+            No refunds. 😌❤️
+        </strong>
+
+        <br><br>
+
+        And one more thing...
+
+        <br><br>
+
+        <strong>
+            Thank you for being you. 🫶
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section>
+
+    <div class="final-message">
+
+        <div style="font-size:70px;">
+            🫂
+        </div>
+
+        <h2>
+            Happy Boy Bestie Day,
+            Noris! ❤️
+        </h2>
+
+        <p>
+
+            This website might look like a collection
+            of jokes and random nonsense...
+
+            <br><br>
+
+            but somewhere between all the jokes,
+            there's a simple truth:
+
+            <br><br>
+
+            <strong>
+                I'm really lucky to have you as my best friend.
+            </strong>
+
+            <br><br>
+
+            Here's to more conversations,
+            more memories,
+            more stupidity,
+            more arguments,
+            more laughter...
+
+            <br><br>
+
+            and many more years of this weird,
+            beautiful friendship. 🫶
+
+            <br><br>
+
+            Don't change too much, Noris.
+
+            <br>
+
+            You're annoying...
+
+            <br>
+
+            but you're <b>my annoying bestie.</b> ❤️
+
+        </p>
+
+        <br><br>
+
+        <button class="btn" onclick="finalHearts()">
+            One Last Surprise ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with <span>❤️</span>,
+    friendship & unnecessary amounts of bakchodi.
+
+    <br><br>
+
+    © Noris & His Permanently Annoying Girl Bestie
+
+</footer>
+
+
+<script>
+
+/* SCROLL */
+
+function scrollToSection(){
+
+    document.getElementById("main")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* SECRET */
+
+function secretMessage(){
+
+    const msg =
+    document.getElementById("secretMessage");
+
+    if(msg.style.display === "block"){
+
+        msg.style.display="none";
+
+    }else{
+
+        msg.style.display="block";
+
+        for(let i=0;i<20;i++){
+
+            setTimeout(
+                createHeart,
+                i*100
+            );
+
+        }
+
+    }
+
+}
+
+
+/* QUIZ */
+
+const quiz = [
+
+    {
+        question:"Noris ki girl bestie kaun hai? 👀",
+
+        options:[
+            "Koi random ladki",
+            "His favourite person 😌",
+            "Google",
+            "His WiFi"
+        ],
+
+        answer:1
+    },
+
+    {
+        question:"Humari friendship ka main ingredient kya hai?",
+
+        options:[
+            "Bakchodi 😂",
+            "Silence",
+            "Formal emails",
+            "Business meetings"
+        ],
+
+        answer:0
+    },
+
+    {
+        question:"Noris ko sabse zyada kya karna chahiye?",
+
+        options:[
+            "Normal banna",
+            "Aur annoying hona",
+            "Bestie ko pareshan karna",
+            "Kuch bhi nahi"
+        ],
+
+        answer:2
+    },
+
+    {
+        question:"Is friendship ka expiry date kya hai?",
+
+        options:[
+            "1 year",
+            "5 years",
+            "Jab tak WiFi hai",
+            "No expiry ❤️"
+        ],
+
+        answer:3
+    }
+
+];
+
+let currentQuestion=0;
+
+function loadQuiz(){
+
+    const q=quiz[currentQuestion];
+
+    document.getElementById("question")
+    .innerText=q.question;
+
+    const options=
+    document.getElementById("options");
+
+    options.innerHTML="";
+
+    document.getElementById("quizResult")
+    .innerText="";
+
+    q.options.forEach(
+        (option,index)=>{
+
+            const button=
+            document.createElement("div");
+
+            button.className="option";
+
+            button.innerText=option;
+
+            button.onclick=()=>{
+
+                if(index===q.answer){
+
+                    document.getElementById("quizResult")
+                    .innerText=
+                    "Correct! Finally, you know something. 😂❤️";
+
+                    createHeart();
+
+                }else{
+
+                    document.getElementById("quizResult")
+                    .innerText=
+                    "Wrong. Friendship review pending. 💀";
+
+                }
+
+                setTimeout(()=>{
+
+                    currentQuestion++;
+
+                    if(currentQuestion>=quiz.length){
+
+                        currentQuestion=0;
+
+                        document.getElementById("question")
+                        .innerText=
+                        "Quiz complete! 🎉";
+
+                        document.getElementById("options")
+                        .innerHTML=
+                        "<div style='color:#ff82aa;font-size:20px'>Congratulations, Noris. You survived. 🫡❤️</div>";
+
+                    }else{
+
+                        loadQuiz();
+
+                    }
+
+                },1300);
+
+            };
+
+            options.appendChild(button);
+
+        }
+    );
+
+}
+
+loadQuiz();
+
+
+/* HEARTS */
+
+function createHeart(){
+
+    const heart=
+    document.createElement("div");
+
+    heart.className="heart";
+
+    const emojis=[
+        "❤️",
+        "💗",
+        "💖",
+        "🫶",
+        "✨",
+        "💕",
+        "🌸"
+    ];
+
+    heart.innerText=
+    emojis[
+        Math.floor(
+            Math.random()*emojis.length
+        )
+    ];
+
+    heart.style.left=
+    Math.random()*100+"vw";
+
+    heart.style.animationDuration=
+    (3+Math.random()*3)+"s";
+
+    heart.style.fontSize=
+    (15+Math.random()*20)+"px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(
+        ()=>heart.remove(),
+        6000
+    );
+
+}
+
+
+/* FINAL SURPRISE */
+
+function finalHearts(){
+
+    for(let i=0;i<80;i++){
+
+        setTimeout(
+            createHeart,
+            i*60
+        );
+
+    }
+
+}
+
+
+/* RANDOM HEARTS */
+
+setInterval(()=>{
+
+    if(Math.random()>.55){
+
+        createHeart();
+
+    }
+
+},1000);
+
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Noris.exe ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#090914;
+    color:white;
+    overflow-x:hidden;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+    radial-gradient(circle at 20% 20%,#ff2d7530,transparent 30%),
+    radial-gradient(circle at 80% 70%,#7c3cff30,transparent 30%),
+    #090914;
+}
+
+.blob{
+    position:fixed;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.35;
+    z-index:-1;
+}
+
+.blob.one{
+    background:#ff2675;
+    top:10%;
+    left:-100px;
+}
+
+.blob.two{
+    background:#7c3cff;
+    bottom:5%;
+    right:-100px;
+}
+
+section{
+    min-height:100vh;
+    padding:90px 8%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.hero{
+    text-align:center;
+}
+
+.small{
+    color:#ff78a8;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(55px,12vw,130px);
+    line-height:.9;
+    background:linear-gradient(
+        90deg,
+        #ff4f91,
+        #ffb0ca,
+        #a87cff
+    );
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        filter:drop-shadow(0 0 5px #ff3677);
+    }
+    to{
+        filter:drop-shadow(0 0 25px #ff3677);
+    }
+}
+
+.subtitle{
+    margin:30px auto;
+    max-width:700px;
+    color:#c9c9d8;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.btn{
+    border:none;
+    background:linear-gradient(
+        135deg,
+        #ff347d,
+        #8c4cff
+    );
+    color:white;
+    padding:15px 28px;
+    border-radius:40px;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 10px 30px #ff347d40;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 15px 40px #ff347d70;
+}
+
+.section-title{
+    font-size:42px;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.section-subtitle{
+    color:#aaaabc;
+    margin-bottom:50px;
+    text-align:center;
+    max-width:700px;
+    line-height:1.7;
+}
+
+/* CARDS */
+
+.cards{
+    width:100%;
+    max-width:1100px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#ffffff08;
+    border:1px solid #ffffff12;
+    backdrop-filter:blur(15px);
+    padding:30px;
+    border-radius:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#ff4c8b80;
+    background:#ffffff0d;
+}
+
+.emoji{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#ff82aa;
+}
+
+.card p{
+    color:#bdbdca;
+    line-height:1.7;
+}
+
+/* FRIENDSHIP TIMELINE */
+
+.timeline{
+    width:100%;
+    max-width:800px;
+    position:relative;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:linear-gradient(
+        #ff4385,
+        #8c4cff
+    );
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:35px;
+    padding-left:60px;
+}
+
+.timeline-dot{
+    position:absolute;
+    left:8px;
+    top:5px;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:#ff4d8b;
+    box-shadow:0 0 20px #ff4d8b;
+}
+
+.timeline-content{
+    background:#ffffff08;
+    border:1px solid #ffffff12;
+    border-radius:20px;
+    padding:25px;
+}
+
+.timeline-content h3{
+    color:#ff82aa;
+    margin-bottom:8px;
+}
+
+.timeline-content p{
+    color:#bbbcca;
+    line-height:1.7;
+}
+
+/* STATS */
+
+.stats{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.stat{
+    width:190px;
+    padding:28px 15px;
+    background:#ffffff08;
+    border-radius:20px;
+    border:1px solid #ffffff12;
+    text-align:center;
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:scale(1.05);
+}
+
+.stat span{
+    display:block;
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.stat p{
+    color:#aaaabc;
+}
+
+/* AWARDS */
+
+.awards{
+    width:100%;
+    max-width:1000px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.award{
+    background:linear-gradient(
+        135deg,
+        #ffffff08,
+        #ff367708
+    );
+    border:1px solid #ffffff12;
+    padding:30px;
+    border-radius:25px;
+    transition:.3s;
+}
+
+.award:hover{
+    transform:translateY(-7px);
+}
+
+.award-icon{
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.award h3{
+    color:#ff86ad;
+    margin-bottom:8px;
+}
+
+.award p{
+    color:#bdbdca;
+    line-height:1.7;
+}
+
+/* LETTER */
+
+.letter{
+    max-width:800px;
+    background:#ffffff08;
+    border:1px solid #ffffff15;
+    border-radius:30px;
+    padding:45px;
+    line-height:2;
+    color:#d5d5df;
+    font-size:17px;
+    box-shadow:0 20px 70px #00000040;
+}
+
+.letter strong{
+    color:#ff79a8;
+}
+
+/* RULES */
+
+.rules{
+    max-width:800px;
+    width:100%;
+}
+
+.rule{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#ffffff08;
+    border:1px solid #ffffff12;
+    padding:20px;
+    border-radius:18px;
+    margin-bottom:15px;
+}
+
+.rule-number{
+    min-width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(
+        135deg,
+        #ff397e,
+        #854dff
+    );
+    border-radius:50%;
+    font-weight:bold;
+}
+
+.rule p{
+    color:#c3c3d0;
+    line-height:1.6;
+}
+
+/* QUIZ */
+
+.quiz-box{
+    max-width:700px;
+    width:100%;
+    text-align:center;
+    background:#ffffff08;
+    border:1px solid #ffffff15;
+    border-radius:30px;
+    padding:40px;
+}
+
+#question{
+    font-size:24px;
+    line-height:1.5;
+    margin-bottom:30px;
+}
+
+.options{
+    display:grid;
+    gap:12px;
+}
+
+.option{
+    padding:15px;
+    border-radius:15px;
+    border:1px solid #ffffff15;
+    background:#ffffff08;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.option:hover{
+    background:#ff397e22;
+    border-color:#ff397e70;
+}
+
+/* MEMORY */
+
+.memory-grid{
+    width:100%;
+    max-width:1000px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.memory{
+    min-height:190px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+    border-radius:25px;
+    background:linear-gradient(
+        145deg,
+        #ffffff0b,
+        #ff3b7810
+    );
+    border:1px solid #ffffff12;
+    transition:.3s;
+}
+
+.memory:hover{
+    transform:rotate(-2deg) scale(1.03);
+}
+
+.memory p{
+    color:#c6c6d2;
+    line-height:1.7;
+}
+
+/* SECRET */
+
+.secret{
+    text-align:center;
+}
+
+#secretMessage{
+    display:none;
+    margin-top:25px;
+    padding:30px;
+    max-width:650px;
+    color:#ffc1d7;
+    background:#ff3d7d12;
+    border:1px solid #ff3d7d30;
+    border-radius:20px;
+    line-height:1.8;
+}
+
+/* FINAL */
+
+.final-message{
+    text-align:center;
+    max-width:750px;
+}
+
+.final-message h2{
+    font-size:55px;
+    margin-bottom:25px;
+    background:linear-gradient(
+        90deg,
+        #ff4f91,
+        #a87cff
+    );
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.final-message p{
+    color:#c3c3d0;
+    font-size:18px;
+    line-height:1.9;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:50px 20px 70px;
+    color:#77778b;
+}
+
+footer span{
+    color:#ff5b91;
+}
+
+/* HEARTS */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:20px;
+    pointer-events:none;
+    animation:floatUp 5s linear forwards;
+    z-index:20;
+}
+
+@keyframes floatUp{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:800px){
+
+    .cards,
+    .awards,
+    .memory-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    .letter{
+        padding:28px;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+    .final-message h2{
+        font-size:40px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+<div class="blob one"></div>
+<div class="blob two"></div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="small">
+        ⚠️ Important Friendship Announcement
+    </div>
+
+    <h1>NORIS</h1>
+
+    <p class="subtitle">
+
+        Congratulations Yash aka Noris 😭<br>
+
+        You have officially survived another year
+        as my <b>boy best friend.</b> 🫡❤️
+
+        <br><br>
+
+        No boyfriend.
+        No girlfriend.
+        Just two idiots being best friends. 🤝
+
+    </p>
+
+    <button class="btn" onclick="scrollToSection()">
+        Enter Noris Universe 🚀
+    </button>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section id="main">
+
+    <h2 class="section-title">
+        So... Why Is Noris Special? 🤨
+    </h2>
+
+    <p class="section-subtitle">
+        Honestly, even I don't know.
+        But after extensive research,
+        here's the evidence.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="emoji">😂</div>
+
+            <h3>Professional Idiot</h3>
+
+            <p>
+                Somehow you manage to make even the most
+                normal conversation completely stupid.
+                And somehow... I still laugh.
+                Unfortunately.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="emoji">🫂</div>
+
+            <h3>Always There</h3>
+
+            <p>
+                Jokes apart, you're one of those people
+                I know I can talk to without having to
+                explain every single thing.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="emoji">🤡</div>
+
+            <h3>Certified Nonsense</h3>
+
+            <p>
+                Your talent for saying the most random
+                thing at the most random moment
+                genuinely deserves an award.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="emoji">🧠</div>
+
+            <h3>Unexpected Therapist</h3>
+
+            <p>
+                Sometimes you give surprisingly good
+                advice. Which is honestly concerning
+                because I didn't expect that from you.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="emoji">📱</div>
+
+            <h3>Random Text Machine</h3>
+
+            <p>
+                One minute we're talking normally.
+                The next minute we're discussing
+                something that makes absolutely no sense.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="emoji">❤️</div>
+
+            <h3>Actually Special</h3>
+
+            <p>
+                Under all the nonsense,
+                you're genuinely someone I value
+                and I'm really glad you're my bestie.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FRIENDSHIP TIMELINE -->
+
+<section>
+
+    <h2 class="section-title">
+        The Noris Lore 📖
+    </h2>
+
+    <p class="section-subtitle">
+        A completely unofficial history of our friendship.
+    </p>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>Chapter 01 — Somehow We Became Friends</h3>
+
+                <p>
+                    There was probably a normal beginning...
+                    but honestly, our friendship became
+                    chaotic way too quickly. 😭
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>Chapter 02 — The Bakchodi Era</h3>
+
+                <p>
+                    Random conversations,
+                    stupid jokes,
+                    unnecessary arguments
+                    and somehow endless things to talk about.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>Chapter 03 — Bestie Status Unlocked 🔓</h3>
+
+                <p>
+                    Somewhere along the way,
+                    you stopped being just a friend
+                    and became one of my people.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h3>Chapter 04 — Currently Loading...</h3>
+
+                <p>
+                    More memories,
+                    more nonsense,
+                    more arguments,
+                    more laughter
+                    and hopefully many more years of friendship. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section>
+
+    <h2 class="section-title">
+        Noris Friendship Statistics 📊
+    </h2>
+
+    <p class="section-subtitle">
+        Completely scientific.
+        Definitely not made up.
+    </p>
+
+    <div class="stats">
+
+        <div class="stat">
+            <span>∞</span>
+            <p>Random Conversations</p>
+        </div>
+
+        <div class="stat">
+            <span>99%</span>
+            <p>Bakchodi Level</p>
+        </div>
+
+        <div class="stat">
+            <span>100%</span>
+            <p>Trust</p>
+        </div>
+
+        <div class="stat">
+            <span>0%</span>
+            <p>Normal Behaviour</p>
+        </div>
+
+        <div class="stat">
+            <span>24/7</span>
+            <p>Bestie Energy</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AWARDS -->
+
+<section>
+
+    <h2 class="section-title">
+        The Official Noris Awards 🏆
+    </h2>
+
+    <p class="section-subtitle">
+        After absolutely no judging process whatsoever...
+    </p>
+
+    <div class="awards">
+
+        <div class="award">
+
+            <div class="award-icon">🏆</div>
+
+            <h3>Best Boy Bestie Award</h3>
+
+            <p>
+                Awarded for being annoying,
+                supportive, funny and somehow
+                still tolerable.
+            </p>
+
+        </div>
+
+
+        <div class="award">
+
+            <div class="award-icon">🥇</div>
+
+            <h3>Most Random Person Award</h3>
+
+            <p>
+                For saying things nobody asked for
+                at moments nobody expected.
+            </p>
+
+        </div>
+
+
+        <div class="award">
+
+            <div class="award-icon">🫡</div>
+
+            <h3>Certified Homie Award</h3>
+
+            <p>
+                For surviving countless conversations
+                and still coming back for more.
+            </p>
+
+        </div>
+
+
+        <div class="award">
+
+            <div class="award-icon">💖</div>
+
+            <h3>Actually Important Award</h3>
+
+            <p>
+                For being someone whose presence
+                genuinely matters, even when
+                neither of us says it.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MEMORIES -->
+
+<section>
+
+    <h2 class="section-title">
+        Things That Make This Friendship Us 🫶
+    </h2>
+
+    <p class="section-subtitle">
+        Some friendships are made from big moments.
+        Ours is made from tiny stupid ones.
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory">
+            <p>
+                😂 Random conversations that somehow
+                become hours long.
+            </p>
+        </div>
+
+        <div class="memory">
+            <p>
+                🤡 Making fun of each other for
+                absolutely no reason.
+            </p>
+        </div>
+
+        <div class="memory">
+            <p>
+                📱 Sending random messages just because
+                something reminded us of the other.
+            </p>
+        </div>
+
+        <div class="memory">
+            <p>
+                🫂 Being able to talk about serious
+                things without making it awkward.
+            </p>
+        </div>
+
+        <div class="memory">
+            <p>
+                😭 Saying "okay bye" and then continuing
+                the conversation for another 40 minutes.
+            </p>
+        </div>
+
+        <div class="memory">
+            <p>
+                ❤️ Knowing that behind all the jokes,
+                there's genuine care.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FRIENDSHIP RULES -->
+
+<section>
+
+    <h2 class="section-title">
+        Official Bestie Rules 📜
+    </h2>
+
+    <p class="section-subtitle">
+        Read carefully. There will be no appeals.
+    </p>
+
+    <div class="rules">
+
+        <div class="rule">
+
+            <div class="rule-number">01</div>
+
+            <p>
+                Besties are legally required to
+                annoy each other at least once a day.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">02</div>
+
+            <p>
+                If one person says "I have something
+                to tell you", the other person MUST listen.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">03</div>
+
+            <p>
+                Embarrassing moments shall never be forgotten.
+                They shall be saved for future blackmail.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">04</div>
+
+            <p>
+                Serious problems require serious support.
+                Stupid problems require even more support.
+            </p>
+
+        </div>
+
+
+        <div class="rule">
+
+            <div class="rule-number">05</div>
+
+            <p>
+                No matter how busy life gets,
+                the friendship stays.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section>
+
+    <h2 class="section-title">
+        How Well Do You Know Your Girl Bestie? 👀
+    </h2>
+
+    <p class="section-subtitle">
+        Noris, this one is for you.
+        Let's see if you've been paying attention.
+    </p>
+
+    <div class="quiz-box">
+
+        <div id="question">
+            Loading question...
+        </div>
+
+        <div class="options" id="options"></div>
+
+        <br>
+
+        <p id="quizResult"></p>
+
+    </div>
+
+</section>
+
+
+<!-- EMOTIONAL -->
+
+<section>
+
+    <h2 class="section-title">
+        Okay... Jokes Aside 🫶
+    </h2>
+
+    <p class="section-subtitle">
+        Thoda emotional hone ka time hai.
+    </p>
+
+    <div class="letter">
+
+        Yash,
+
+        <br><br>
+
+        I know hum dono ka relationship mostly
+        <strong>bakchodi, roasting aur random conversations</strong>
+        se bhara hua hai.
+
+        <br><br>
+
+        But honestly, I'm really glad that you're my
+        <strong>boy best friend.</strong>
+
+        <br><br>
+
+        Har friendship perfect nahi hoti.
+        Kabhi hum irritate hote hain,
+        kabhi ladte hain,
+        kabhi ek dusre ko unnecessarily
+        pareshan karte hain...
+
+        <br><br>
+
+        But at the end of the day,
+        you're still one of those people
+        whose presence genuinely matters to me.
+
+        <br><br>
+
+        And maybe I don't say it enough,
+        but I really appreciate the fact
+        that I can be completely myself around you.
+
+        <br><br>
+
+        I hope life mein chahe kitne bhi naye log aaye,
+        kitni bhi cheezein change ho,
+        humari friendship ka ye stupid sa bond
+        kahin nahi jaaye.
+
+        <br><br>
+
+        And no, this is NOT me becoming emotional.
+        Screenshot mat lena. 😭
+
+        <br><br>
+
+        Bas itna yaad rakhna...
+
+        <br><br>
+
+        <strong>
+            Boyfriend nahi ho,
+            boyfriend banne ki zarurat bhi nahi.
+
+            You're my best friend,
+            and honestly,
+            that's pretty damn special. ❤️
+        </strong>
+
+        <br><br>
+
+        Stay stupid.
+        Stay annoying.
+        And please don't become normal.
+
+        <br><br>
+
+        — Your Girl Bestie 🫶
+
+    </div>
+
+</section>
+
+
+<!-- SECRET -->
+
+<section class="secret">
+
+    <h2 class="section-title">
+        🔐 Classified Section
+    </h2>
+
+    <p class="section-subtitle">
+        Noris ke liye ek secret message...
+    </p>
+
+    <button class="btn" onclick="secretMessage()">
+        DO NOT CLICK 👀
+    </button>
+
+    <div id="secretMessage">
+
+        If you're reading this...
+
+        <br><br>
+
+        congratulations, idiot. 😂
+
+        <br><br>
+
+        You officially have a girl bestie
+        who spent her time making an entire website
+        just to remind you that you're important.
+
+        <br><br>
+
+        So yes...
+
+        <strong>
+            you're stuck with me.
+            No refunds. 😌❤️
+        </strong>
+
+        <br><br>
+
+        And one more thing...
+
+        <br><br>
+
+        <strong>
+            Thank you for being you. 🫶
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section>
+
+    <div class="final-message">
+
+        <div style="font-size:70px;">
+            🫂
+        </div>
+
+        <h2>
+            Happy Boy Bestie Day,
+            Noris! ❤️
+        </h2>
+
+        <p>
+
+            This website might look like a collection
+            of jokes and random nonsense...
+
+            <br><br>
+
+            but somewhere between all the jokes,
+            there's a simple truth:
+
+            <br><br>
+
+            <strong>
+                I'm really lucky to have you as my best friend.
+            </strong>
+
+            <br><br>
+
+            Here's to more conversations,
+            more memories,
+            more stupidity,
+            more arguments,
+            more laughter...
+
+            <br><br>
+
+            and many more years of this weird,
+            beautiful friendship. 🫶
+
+            <br><br>
+
+            Don't change too much, Noris.
+
+            <br>
+
+            You're annoying...
+
+            <br>
+
+            but you're <b>my annoying bestie.</b> ❤️
+
+        </p>
+
+        <br><br>
+
+        <button class="btn" onclick="finalHearts()">
+            One Last Surprise ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with <span>❤️</span>,
+    friendship & unnecessary amounts of bakchodi.
+
+    <br><br>
+
+    © Noris & His Permanently Annoying Girl Bestie
+
+</footer>
+
+
+<script>
+
+/* SCROLL */
+
+function scrollToSection(){
+
+    document.getElementById("main")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* SECRET */
+
+function secretMessage(){
+
+    const msg =
+    document.getElementById("secretMessage");
+
+    if(msg.style.display === "block"){
+
+        msg.style.display="none";
+
+    }else{
+
+        msg.style.display="block";
+
+        for(let i=0;i<20;i++){
+
+            setTimeout(
+                createHeart,
+                i*100
+            );
+
+        }
+
+    }
+
+}
+
+
+/* QUIZ */
+
+const quiz = [
+
+    {
+        question:"Noris ki girl bestie kaun hai? 👀",
+
+        options:[
+            "Koi random ladki",
+            "His favourite person 😌",
+            "Google",
+            "His WiFi"
+        ],
+
+        answer:1
+    },
+
+    {
+        question:"Humari friendship ka main ingredient kya hai?",
+
+        options:[
+            "Bakchodi 😂",
+            "Silence",
+            "Formal emails",
+            "Business meetings"
+        ],
+
+        answer:0
+    },
+
+    {
+        question:"Noris ko sabse zyada kya karna chahiye?",
+
+        options:[
+            "Normal banna",
+            "Aur annoying hona",
+            "Bestie ko pareshan karna",
+            "Kuch bhi nahi"
+        ],
+
+        answer:2
+    },
+
+    {
+        question:"Is friendship ka expiry date kya hai?",
+
+        options:[
+            "1 year",
+            "5 years",
+            "Jab tak WiFi hai",
+            "No expiry ❤️"
+        ],
+
+        answer:3
+    }
+
+];
+
+let currentQuestion=0;
+
+function loadQuiz(){
+
+    const q=quiz[currentQuestion];
+
+    document.getElementById("question")
+    .innerText=q.question;
+
+    const options=
+    document.getElementById("options");
+
+    options.innerHTML="";
+
+    document.getElementById("quizResult")
+    .innerText="";
+
+    q.options.forEach(
+        (option,index)=>{
+
+            const button=
+            document.createElement("div");
+
+            button.className="option";
+
+            button.innerText=option;
+
+            button.onclick=()=>{
+
+                if(index===q.answer){
+
+                    document.getElementById("quizResult")
+                    .innerText=
+                    "Correct! Finally, you know something. 😂❤️";
+
+                    createHeart();
+
+                }else{
+
+                    document.getElementById("quizResult")
+                    .innerText=
+                    "Wrong. Friendship review pending. 💀";
+
+                }
+
+                setTimeout(()=>{
+
+                    currentQuestion++;
+
+                    if(currentQuestion>=quiz.length){
+
+                        currentQuestion=0;
+
+                        document.getElementById("question")
+                        .innerText=
+                        "Quiz complete! 🎉";
+
+                        document.getElementById("options")
+                        .innerHTML=
+                        "<div style='color:#ff82aa;font-size:20px'>Congratulations, Noris. You survived. 🫡❤️</div>";
+
+                    }else{
+
+                        loadQuiz();
+
+                    }
+
+                },1300);
+
+            };
+
+            options.appendChild(button);
+
+        }
+    );
+
+}
+
+loadQuiz();
+
+
+/* HEARTS */
+
+function createHeart(){
+
+    const heart=
+    document.createElement("div");
+
+    heart.className="heart";
+
+    const emojis=[
+        "❤️",
+        "💗",
+        "💖",
+        "🫶",
+        "✨",
+        "💕",
+        "🌸"
+    ];
+
+    heart.innerText=
+    emojis[
+        Math.floor(
+            Math.random()*emojis.length
+        )
+    ];
+
+    heart.style.left=
+    Math.random()*100+"vw";
+
+    heart.style.animationDuration=
+    (3+Math.random()*3)+"s";
+
+    heart.style.fontSize=
+    (15+Math.random()*20)+"px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(
+        ()=>heart.remove(),
+        6000
+    );
+
+}
+
+
+/* FINAL SURPRISE */
+
+function finalHearts(){
+
+    for(let i=0;i<80;i++){
+
+        setTimeout(
+            createHeart,
+            i*60
+        );
+
+    }
+
+}
+
+
+/* RANDOM HEARTS */
+
+setInterval(()=>{
+
+    if(Math.random()>.55){
+
+        createHeart();
+
+    }
+
+},1000);
+
+</script>
+
+</body>
+</html>
